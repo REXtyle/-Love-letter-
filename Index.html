@@ -1,0 +1,274 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Will You Be Mine? ❤️</title><style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #170019, #36002d, #120018);
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        overflow-x: hidden;
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        max-width: 600px;
+        margin: auto;
+        padding: 60px 22px 40px;
+    }
+
+    .heart-icon {
+        font-size: 55px;
+        animation: heartbeat 1.3s infinite;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        color: #ff72b6;
+        font-size: clamp(27px, 7vw, 40px);
+        margin-bottom: 20px;
+        animation: appear 2s ease;
+        text-shadow: 0 0 15px #ff168a;
+    }
+
+    .intro {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #ffe0ef;
+        margin-bottom: 25px;
+        animation: appear 2.5s ease;
+    }
+
+    .open-btn {
+        background: linear-gradient(45deg, #ff168a, #a600ff);
+        border: none;
+        color: white;
+        padding: 15px 25px;
+        border-radius: 30px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 0 20px #ff168a80;
+        transition: transform 0.3s;
+    }
+
+    .open-btn:active {
+        transform: scale(0.95);
+    }
+
+    .letter {
+        display: none;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid #ff72b6;
+        border-radius: 20px;
+        padding: 25px 20px;
+        margin-top: 30px;
+        line-height: 1.9;
+        color: #fff0f7;
+        box-shadow: 0 0 25px #ff168a30;
+        text-align: left;
+        animation: letterOpen 1s ease;
+    }
+
+    .letter h2 {
+        text-align: center;
+        color: #ff72b6;
+        margin-bottom: 18px;
+    }
+
+    .letter p {
+        margin-bottom: 15px;
+    }
+
+    .signature {
+        text-align: center;
+        color: #ff8ac5;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    .footer {
+        color: #dba9ce;
+        font-size: 13px;
+        margin-top: 35px;
+    }
+
+    .floating-heart {
+        position: fixed;
+        bottom: -40px;
+        z-index: 1;
+        pointer-events: none;
+        animation: floatUp linear forwards;
+    }
+
+    @keyframes heartbeat {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.2);
+        }
+    }
+
+    @keyframes appear {
+        from {
+            opacity: 0;
+            transform: translateY(25px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes floatUp {
+        0% {
+            transform: translateY(0) rotate(0deg);
+            opacity: 0;
+        }
+        10% {
+            opacity: 1;
+        }
+        90% {
+            opacity: 0.8;
+        }
+        100% {
+            transform: translateY(-110vh) rotate(360deg);
+            opacity: 0;
+        }
+    }
+
+    @keyframes letterOpen {
+        from {
+            opacity: 0;
+            transform: translateY(20px) scale(0.95);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            scroll-behavior: auto !important;
+        }
+    }
+</style>
+
+</head><body><main class="container">
+
+    <div class="heart-icon">❤️</div>
+
+    <h1>You Make My Heart Happier 💕</h1>
+
+    <p class="intro">
+        There's something about you that makes me smile.
+        I made this little website just to put a smile on your face. 🥹❤️
+    </p>
+
+    <button class="open-btn" id="openButton">
+        Open My Heart 💌
+    </button>
+
+    <section class="letter" id="loveLetter" aria-live="polite">
+
+        <h2>A Little Something for You ❤️</h2>
+
+        <p>
+            Hey you 😊❤️
+        </p>
+
+        <p>
+            Ever since I got to know you, you've become someone
+            I genuinely enjoy talking to. I can't explain it
+            perfectly, but there's something about you that makes
+            me smile and makes me want to know you even more. 🥹
+        </p>
+
+        <p>
+            I know we're still getting to know each other, and
+            I don't want to rush anything. I just want us to enjoy
+            every moment, share more smiles, and create beautiful
+            memories together.
+        </p>
+
+        <p>
+            I'm happy I got the chance to meet you. I hope this
+            little connection between us grows into something
+            really special. I may not always have the perfect
+            words, but I want you to know that I genuinely like
+            you, and I'm looking forward to knowing more about you. 💗
+        </p>
+
+        <p>
+            So, here's a little reminder: you're special, and
+            I'm glad our paths crossed. Keep smiling, beautiful. ❤️
+        </p>
+
+        <p class="signature">
+            Made with a little courage and lots of care. 💖
+        </p>
+
+    </section>
+
+    <p class="footer">
+        A little page made to brighten your day ✨❤️
+    </p>
+
+</main>
+
+<script>
+    const openButton = document.getElementById("openButton");
+    const loveLetter = document.getElementById("loveLetter");
+
+    openButton.addEventListener("click", function () {
+        loveLetter.style.display = "block";
+        openButton.textContent = "My message for you ❤️";
+        openButton.disabled = true;
+        loveLetter.scrollIntoView({
+            behavior: "smooth",
+            block: "nearest"
+        });
+    });
+
+    function createHeart() {
+        const heart = document.createElement("span");
+
+        heart.className = "floating-heart";
+
+        const hearts = ["❤️", "💕", "💗", "💖", "💘"];
+        heart.textContent =
+            hearts[Math.floor(Math.random() * hearts.length)];
+
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize =
+            (14 + Math.random() * 20) + "px";
+
+        const duration = 5 + Math.random() * 4;
+        heart.style.animationDuration = duration + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(function () {
+            heart.remove();
+        }, duration * 1000);
+    }
+
+    setInterval(createHeart, 650);
+</script>
+
+</body>
+</html>
